@@ -28,11 +28,11 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 - Desktop preview
 
-![](./images/Desktop%20preview.png)
+![](./images/Desktop%20preview.jpg)
 
 - Mobile preview
 
-  ![](./images/Mobile%20preview.png)
+  ![](./images/Mobile%20preview.jpg)
 
 ### Links
 
