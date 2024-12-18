@@ -36,8 +36,8 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/Bolazcoding/testimonials-grid-section)
-- Live Site URL: [Live site URL](https://testimonials-grid-section-pink.vercel.app/)
+- Solution URL: [Solution URL](https://github.com/Bolazcoding/article-preview)
+- Live Site URL: [Live site URL](https://article-preview-orcin.vercel.app/)
 
 ## My process
 
