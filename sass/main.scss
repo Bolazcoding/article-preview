@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500..700&display=swap");
+
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$DesaturatedDarkBlue: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $LightGrayishBlue;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.desktop-img {
+  width: 28rem;
+  border-radius: 0.9rem 0 0 0.9rem;
+}
+
+.mobile-img {
+  display: none;
+}
+
+.article {
+  background-color: #fff;
+  padding: 3.5rem;
+  border-radius: 0 0.9rem 0.9rem 0;
+}
+
+.article-heading {
+  color: $VeryDarkGrayishBlue;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.article-text {
+  color: $DesaturatedDarkBlue;
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+  line-height: 1.5;
+}
+
+.article-customer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16rem;
+  margin-top: 2rem;
+}
+
+.customer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.michelle-img {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+}
+
+.customer-name {
+  color: $VeryDarkGrayishBlue;
+  font-size: 1.2rem;
+}
+
+.customer-date {
+  color: $DesaturatedDarkBlue;
+  font-size: 1.1rem;
+}
+
+.customer-social {
+  background-color: $LightGrayishBlue;
+  border: solid $LightGrayishBlue;
+  padding: 0.35rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.customer-social:hover {
+  border: solid $DesaturatedDarkBlue;
+}
+
+.social {
+  display: none;
+}
+
+.social-hover {
+  background-color: $VeryDarkGrayishBlue;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  padding: 1.5rem 3rem;
+  position: absolute;
+  // bottom: 100px; /* Adjust position */
+  top: 49%;
+  left: 92%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  // opacity: 0;
+  // visibility: visible;
+  transition: all 0.3s ease;
+}
+
+/* Tooltip Arrow (The small downward pointer) */
+.social-hover::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Position below the container */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid $VeryDarkGrayishBlue; /* Same color as the container */
+}
+
+.share {
+  color: $DesaturatedDarkBlue;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.social-hover .icon {
+  display: inline-block;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  width: 1.8rem;
+}
+
+// 900px
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+// 700px
+@media (max-width: 43.75em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+// 640px
+
+@media (max-width: 40em) {
+  html {
+    font-size: 55%;
+  }
+
+  .container {
+    max-width: 40rem;
+    flex-direction: column;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+    width: 100%;
+    border-radius: 0.9rem 0.9rem 0 0;
+  }
+
+  .article {
+    border-radius: 0 0 0.9rem 0.9rem;
+    padding: 3.5rem 3rem 2rem 3rem;
+  }
+
+  .article-heading {
+    font-size: 2rem;
+  }
+
+  .article-text {
+    font-size: 1.5rem;
+  }
+
+  .article-customer {
+    margin-top: 3rem;
+    gap: 14rem;
+  }
+
+  .social-hover {
+    width: 100%;
+    padding: 1.8rem 0 1.8rem 4rem;
+    justify-content: flex-start;
+    position: absolute;
+    // bottom: 100px; /* Adjust position */
+    top: 89.6%;
+    left: 50%;
+    border-radius: 0 0 0.9rem 0.9rem;
+  }
+
+  .social-hover .icon {
+    width: 2rem;
+  }
+
+  .customer-social {
+    z-index: 1;
+  }
+
+  .share {
+    font-size: 1.4rem;
+  }
+
+  .customer-social:hover {
+    border: solid $LightGrayishBlue;
+  }
+
+  .social-hover::after {
+    display: none;
+  }
+}
+
+// 400px
+@media (max-width: 25em) {
+  html {
+    font-size: 45%;
+  }
+
+  .article-heading {
+    font-size: 1.9rem;
+  }
+
+  .article-customer {
+    gap: 12rem;
+  }
+
+  .customer-social {
+    padding: 0.25rem;
+  }
+}
+
+// 310px
+@media (max-width: 19.38em) {
+  html {
+    font-size: 40%;
+  }
+
+  .customer-social {
+    padding: 0.2rem;
+  }
+}
